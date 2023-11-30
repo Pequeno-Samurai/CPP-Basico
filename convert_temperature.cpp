@@ -16,7 +16,7 @@ Formula k to F = (0 K − 273,15) × 9/5 + 32 = -459,7 °F
 Step 1: create a function to convert Fahrenheit to Celsius - Done
 Step 2: create a function to convert Fahrenheit to Kelvin - In progress
 
-Step 3: create a function to convert Celsius to Fahrenheit - In progress
+Step 3: create a function to convert Celsius to Fahrenheit - Done
 Step 4: create a function to convert Celsius to Kelvin - In progress
 
 Step 5: create a function to convert Kelvin to Celsius - In progress
@@ -37,6 +37,10 @@ float FahrenheitToCelsius(float fahrenheit){ //is working
     return (fahrenheit - 32) * 5/9;
 }
 
+float CelsiusToFahrenheit(float celsius){ //Is working
+    return (celsius * 9/5) + 32;
+}
+
 #include <iostream>
 
 int main() {
@@ -48,8 +52,11 @@ int main() {
     std::cout << FahrenheitToCelsius(212) << std::endl;
     */
 
-
-
-
+    /*CelsiusToFahrenheit() tests
+    std::cout << CelsiusToFahrenheit(0) << std::endl;
+    std::cout << CelsiusToFahrenheit(32) << std::endl;
+    std::cout << CelsiusToFahrenheit(100) << std::endl;
+    std::cout << CelsiusToFahrenheit(212) << std::endl;
+    */
     return 0;
 }
