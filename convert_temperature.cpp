@@ -12,18 +12,37 @@ Formula K to C = 0 K − 273,15 = -273,1 °C
 Formula k to F = (0 K − 273,15) × 9/5 + 32 = -459,7 °F
 */
 
-/*
-Step 1: create a function to convert Fahrenheit to Celsius - Done
-Step 2: create a function to convert Fahrenheit to Kelvin - In progress
+float FahrenheitToCelsius(float fahrenheit){ 
+    return (fahrenheit - 32) * 5/9;
+}
 
-Step 3: create a function to convert Celsius to Fahrenheit - Done
-Step 4: create a function to convert Celsius to Kelvin - In progress
+float FahrenheitToKelvin(float fahrenheit){ 
+    return (fahrenheit - 32) * 5/9 + 273.15;
+}
 
-Step 5: create a function to convert Kelvin to Celsius - In progress
-Step 6: create a function to convert Kelvin to Fahrenheit - In progress
-*/
+float CelsiusToFahrenheit(float celsius){ 
+    return (celsius * 9/5) + 32;
+}
 
-/*Options menu:
+float CelsiusToKelvin(float celsius){ 
+    return celsius + 273.15;
+}
+
+float KelvinToCelsius(float kelvin){ 
+    return kelvin - 273.15;
+}
+
+float KelvinToFahrenheit(float kelvin){ 
+    return (kelvin - 273.15) * 9/5 + 32;
+}
+
+#include <iostream>
+
+int main() {
+
+    float temperature;
+    int option;
+
     std::cout << "1.Convert Fahrenheit to Celsius" << std::endl;
     std::cout << "2.Convert Celsius to Fahrenheit" << std::endl;
     std::cout << "3.Convert Kelvin to Celsius" << std::endl;
@@ -31,32 +50,46 @@ Step 6: create a function to convert Kelvin to Fahrenheit - In progress
     std::cout << "5.Convert Fahrenheit to Kelvin" << std::endl;
     std::cout << "6.Convert Kelvin to Fahrenheit" << std::endl;
     std::cout << "7.Exit" << std::endl;
-*/
+    std::cout << ">>>>: ";
 
-float FahrenheitToCelsius(float fahrenheit){ //is working
-    return (fahrenheit - 32) * 5/9;
-}
+    std::cin >> option;
 
-float CelsiusToFahrenheit(float celsius){ //Is working
-    return (celsius * 9/5) + 32;
-}
-
-#include <iostream>
-
-int main() {
-
-    /*FahrenheitToCelsius() tests
-    std::cout << FahrenheitToCelsius(0) << std::endl;
-    std::cout << FahrenheitToCelsius(32) << std::endl;
-    std::cout << FahrenheitToCelsius(100) << std::endl;
-    std::cout << FahrenheitToCelsius(212) << std::endl;
-    */
-
-    /*CelsiusToFahrenheit() tests
-    std::cout << CelsiusToFahrenheit(0) << std::endl;
-    std::cout << CelsiusToFahrenheit(32) << std::endl;
-    std::cout << CelsiusToFahrenheit(100) << std::endl;
-    std::cout << CelsiusToFahrenheit(212) << std::endl;
-    */
+    switch (option) {
+        case 1:
+            std::cout << "Enter temperature in Fahrenheit: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Celsius: " << FahrenheitToCelsius(temperature) << std::endl;
+            break;
+        case 2:
+            std::cout << "Enter temperature in Celsius: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Fahrenheit: " << CelsiusToFahrenheit(temperature) << std::endl;
+            break;
+        case 3:
+            std::cout << "Enter temperature in Kelvin: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Celsius: " << KelvinToCelsius(temperature) << std::endl;
+            break;
+        case 4:
+            std::cout << "Enter temperature in Celsius: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Kelvin: " << CelsiusToKelvin(temperature) << std::endl;
+            break;
+        case 5:
+            std::cout << "Enter temperature in Fahrenheit: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Kelvin: " << FahrenheitToKelvin(temperature) << std::endl;
+            break;
+        case 6:
+            std::cout << "Enter temperature in Kelvin: ";
+            std::cin >> temperature;
+            std::cout << "Temperature in Fahrenheit: " << KelvinToFahrenheit(temperature) << std::endl;
+            break;
+        case 7:
+            std::cout << "Ending the program";
+            break;
+        default:
+            break;
+    }
     return 0;
 }
