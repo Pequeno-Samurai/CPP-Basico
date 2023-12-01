@@ -12,27 +12,27 @@ Formula K to C = 0 K − 273,15 = -273,1 °C
 Formula k to F = (0 K − 273,15) × 9/5 + 32 = -459,7 °F
 */
 
-float FahrenheitToCelsius(float fahrenheit){ 
+float FahrenheitToCelsius(float fahrenheit){ //Converts Fahrenheit to Celsius
     return (fahrenheit - 32) * 5/9;
 }
 
-float FahrenheitToKelvin(float fahrenheit){ 
+float FahrenheitToKelvin(float fahrenheit){ //Converts Fahrenheit to Kelvin
     return (fahrenheit - 32) * 5/9 + 273.15;
 }
 
-float CelsiusToFahrenheit(float celsius){ 
+float CelsiusToFahrenheit(float celsius){ //Converts Celsius to Fahrenheit
     return (celsius * 9/5) + 32;
 }
 
-float CelsiusToKelvin(float celsius){ 
+float CelsiusToKelvin(float celsius){ //Converts Celsius to Kelvin
     return celsius + 273.15;
 }
 
-float KelvinToCelsius(float kelvin){ 
+float KelvinToCelsius(float kelvin){ //Converts Kelvin to Celsius
     return kelvin - 273.15;
 }
 
-float KelvinToFahrenheit(float kelvin){ 
+float KelvinToFahrenheit(float kelvin){ //Converts Kelvin to Fahrenheit
     return (kelvin - 273.15) * 9/5 + 32;
 }
 
@@ -43,6 +43,7 @@ int main() {
     float temperature;
     int option;
 
+    //Options menu.
     std::cout << "1.Convert Fahrenheit to Celsius" << std::endl;
     std::cout << "2.Convert Celsius to Fahrenheit" << std::endl;
     std::cout << "3.Convert Kelvin to Celsius" << std::endl;
@@ -86,7 +87,7 @@ int main() {
             std::cout << "Temperature in Fahrenheit: " << KelvinToFahrenheit(temperature) << std::endl;
             break;
         case 7:
-            std::cout << "Ending the program";
+            std::cout << "Ending the program"; //End the program.
             break;
         default:
             break;
