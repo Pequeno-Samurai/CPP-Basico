@@ -1,3 +1,4 @@
 # CPP-Basics
 
-Projects i made while learning C++
+Codigos que eu escrevi enquanto aprendia C++]
+
