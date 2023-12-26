@@ -1,4 +1,4 @@
 # CPP-Basics
 
-Codigos que eu escrevi enquanto aprendia C++]
+Codigos que eu escrevi enquanto aprendia C++
 
